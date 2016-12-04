@@ -1,1 +1,5 @@
+### jetbrains
+.idea/
+
+### npm
 node_modules

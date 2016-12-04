@@ -2,12 +2,12 @@
 var assert = require('assert');
 var equal = require('assert-dir-equal');
 var Metalsmith = require('metalsmith');
-var markdown = require('..');
+var kramdown = require('..');
 
-describe('metalsmith-markdown', function(){
-  it('should convert markdown files', function(done){
+describe('metalsmith-kramdown', function(){
+  it('should convert kramdown files', function(done){
     Metalsmith('test/fixtures/basic')
-      .use(markdown({
+      .use(kramdown({
         smartypants: true
       }))
       .build(function(err){
@@ -19,7 +19,7 @@ describe('metalsmith-markdown', function(){
 
   it('should allow a "keys" option', function(done){
     Metalsmith('test/fixtures/keys')
-      .use(markdown({
+      .use(kramdown({
         keys: ['custom'],
         smartypants: true
       }))

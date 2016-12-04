@@ -1,0 +1,10 @@
+name: test
+description: inits and runs all tests
+inputs:
+- name: GEMFURY_API_KEY
+  description: API Key for gemfury.io
+  isSecure: true
+run:
+  serial:
+  - op: init
+  - op: test-unit

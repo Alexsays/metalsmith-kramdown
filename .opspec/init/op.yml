@@ -1,0 +1,2 @@
+name: init
+description: ensures npm pkgs are installed

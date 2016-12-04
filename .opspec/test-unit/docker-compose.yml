@@ -1,0 +1,8 @@
+version: "2"
+services:
+  test-unit:
+    extends:
+      service: node
+      file: ../.common/docker-compose.yml
+    entrypoint: node_modules/.bin/mocha --reporter spec
+    network_mode: none

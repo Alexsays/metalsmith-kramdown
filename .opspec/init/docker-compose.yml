@@ -1,0 +1,19 @@
+version: "2"
+services:
+  init:
+    entrypoint: |
+      sh -ce "
+        ### SET USER TO MAINTAIN FILE OWNERSHIP
+        host_uid=$$(stat -c '%u' .)
+        if ! id $${host_uid} > /dev/null 2>&1; then
+          useradd -u $${host_uid} -m host_user
+        fi
+        username=$$(id $${host_uid} -nu)
+
+        su $${username} -c 'npm install'
+      "
+    extends:
+      service: node
+      file: ../.common/docker-compose.yml
+    network_mode: host
+

@@ -37,6 +37,12 @@ metalsmith.use(kramdown({
 }));
 ```
 
+## Credits
+
+originated as fork of
+[segmentio/metalsmith-markdown](https://github.com/segmentio/metalsmith-markdown)
+updated to support kramdown by [dancork](https://github.com/dancork)
+
 ## License
 
   MIT

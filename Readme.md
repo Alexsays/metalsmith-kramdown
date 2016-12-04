@@ -1,20 +1,20 @@
 
-# metalsmith-markdown
+# metalsmith-kramdown
 
-  A Metalsmith plugin to convert markdown files.
+  A Metalsmith plugin to convert kramdown files.
 
 ## Installation
 
-    $ npm install metalsmith-markdown
+    $ npm install metalsmith-kramdown
 
 ## CLI Usage
 
-  Install via npm and then add the `metalsmith-markdown` key to your `metalsmith.json` plugins with any [kramed](https://github.com/GitbookIO/kramed) options you want, like so:
+  Install via npm and then add the `metalsmith-kramdown` key to your `metalsmith.json` plugins with any [kramed](https://github.com/GitbookIO/kramed) options you want, like so:
 
 ```json
 {
   "plugins": {
-    "metalsmith-markdown": {
+    "metalsmith-kramdown": {
       "smartypants": true,
       "gfm": true,
       "tables": true
@@ -25,12 +25,12 @@
 
 ## Javascript Usage
 
-  Pass `options` to the markdown plugin and pass it to Metalsmith with the `use` method:
+  Pass `options` to the kramdown plugin and pass it to Metalsmith with the `use` method:
 
 ```js
-var markdown = require('metalsmith-markdown');
+var kramdown = require('metalsmith-kramdown');
 
-metalsmith.use(markdown({
+metalsmith.use(kramdown({
   smartypants: true,
   gfm: true,
   tables: true
